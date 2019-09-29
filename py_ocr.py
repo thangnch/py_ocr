@@ -34,7 +34,7 @@ filename = "{}.png".format(os.getpid())
 cv2.imwrite(filename, gray)
 
 # Load ảnh và apply nhận dạng bằng Tesseract OCR
-text = pytesseract.image_to_string(Image.open(filename))
+text = pytesseract.image_to_string(Image.open(filename),lang='vi')
 
 # Xóa ảnh tạm sau khi nhận dạng
 os.remove(filename)
